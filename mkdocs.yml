@@ -10,6 +10,7 @@ copyright: "GolangReview.ru © 2024"
 
 theme:
   name: material
+  custom_dir: overrides
   palette: 
     - scheme: slate
 
@@ -45,8 +46,13 @@ nav:
     - Файловая система: 'linux/filesystem.md'
     - Процессы: 'linux/signals.md'
   - Вопросы по инфраструктуре:
-    - Реляционные базы данных: 'infra/db.md'
+    - Реляционные базы данных: 'infra/db-relation.md'
       
+
+extra:
+  analytics:
+    provider: google
+    property: G-8Z14GZ90VD
 
 markdown_extensions:
   - pymdownx.highlight:
