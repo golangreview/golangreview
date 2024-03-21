@@ -1,26 +1,53 @@
 site_name: GolangReview.ru
+site_url: https://golangreview.ru/
+
+repo_url: https://github.com/golangreview/golangreview
+repo_name: Golang Review
+
+site_description: "GolangReview.ru - база вопросов с собеседований Golang"
+site_author: "pers0na2dev"
+copyright: "GolangReview.ru © 2024"
+
 theme:
   name: material
   palette: 
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
     - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
-extra:
-  alternate:
-    - name: Русский
-      link: /ru/
-      lang: ru
-    - name: English
-      link: /en/ 
-      lang: en
+plugins:
+  - search
+
+nav:
+  - О проекте: 'index.md'
+  - Вопросы по Golang: 
+    - Общие вопросы: 'golang/overall-questions.md'
+    - Типы данных: 
+        - Общие вопросы: 'golang/data-types.md'
+        - Массивы и слайсы: 'golang/array-slice.md'
+        - Строки: 'golang/strings.md'
+        - Мапы: 'golang/hashmap.md'
+        - Структуры: 'golang/structs.md'
+        - Указатели и ссылки: 'golang/links.md'
+        - Интерфейсы: 'golang/interface.md'  
+    - Конкурентность / параллельность: 
+        - Планировщик: 'golang/scheduler.md'
+        - Горутины: 'golang/goroutines.md'
+        - Гонка данных: 'golang/race-condition.md'
+        - Контекст: 'golang/context.md'
+        - Примитивы синхронизации: 'golang/sync-primitives.md'
+    - Остальное:
+        - Defer: 'golang/defer.md'
+        - Очистка мусора: 'golang/garbage-collector.md'
+        - Дженерики: 'golang/generics.md'
+        - Пакеты: 'golang/package.md'
+        - Ошибки и паники: 'golang/errors-panics.md'
+  - Вопросы по Linux:
+    - Общие вопросы: 'linux/overall.md'
+    - Файловая система: 'linux/filesystem.md'
+    - Процессы: 'linux/signals.md'
+  - Вопросы по инфраструктуре:
+    - Реляционные базы данных: 'infra/db.md'
       
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
